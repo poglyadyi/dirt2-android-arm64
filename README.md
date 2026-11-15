@@ -10,14 +10,10 @@
 
 **XITRIX** — [github.com/XITRIX/Dirt-2-Recomp](https://github.com/XITRIX/Dirt-2-Recomp)
 
-Он написал сам рекомпилятор и портировал игру: статическая рекомпиляция Colin McRae: DiRT 2
-(PC v1.1, `dirt2_game.exe`) из 32-битного x86 в переносимый C. Его готовые сборки
+Его готовые сборки
 (macOS / iOS / Android / Switch) публикуются в GitHub Actions:
 [Actions → Build](https://github.com/XITRIX/Dirt-2-Recomp/actions/workflows/build.yml).
 
-Вся заслуга за рекомпилятором, рантаймом, шимами и портами — его. Эта сборка сделана
-из его кода (коммит `cce3bf8`, «Virtual controller added») с моими правками под Android
-(см. [«Что отличается»](#что-отличается-от-сборки-автора)).
 
 ### Что это
 
@@ -115,14 +111,10 @@
 
 **XITRIX** — [github.com/XITRIX/Dirt-2-Recomp](https://github.com/XITRIX/Dirt-2-Recomp)
 
-He wrote the recompiler and made the port: static recompilation of Colin McRae: DiRT 2
-(PC v1.1, `dirt2_game.exe`) from 32-bit x86 to portable C. His prebuilt binaries
+His prebuilt binaries
 (macOS / iOS / Android / Switch) are published as GitHub Actions artifacts:
 [Actions → Build](https://github.com/XITRIX/Dirt-2-Recomp/actions/workflows/build.yml).
 
-The recompiler, runtime, shims and ports are his work. This build is his code
-(commit `cce3bf8`, "Virtual controller added") plus my Android changes
-(see [“Differences from the author's build”](#differences-from-the-authors-build)).
 
 ### What this is
 
