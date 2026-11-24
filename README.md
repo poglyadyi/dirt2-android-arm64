@@ -40,7 +40,7 @@
 | Устройство | HONOR MTN-NX1 (модель `MTN-NX1`) |
 | ОС | Android 16 |
 | GPU | Adreno 810 |
-| Драйвер Vulkan | Turnip Gen8 **v32** (`turnip_v26.2.0_b5`), md5 `6a4f5c6ff8f8ae33cd232253c6b339c8` |
+| Драйвер Vulkan | Turnip Gen8 **v32** (`turnip_v26.2.0_b5`), md5 `6a4f5c6ff8f8ae33cd232253c6b339c8` — только для Adreno 8xx; для 6xx/7xx нужен v26.3.0-R5 |
 | Разрешение рендера | 2640 × 1200 (полный экран, альбомная ориентация) |
 | Качество | preset «ultra» (детализация ultra, тени 2048, MSAA off, зеркала off) |
 
@@ -84,7 +84,9 @@
 
 1. `adb install -r DiRT2-Android-arm64.apk`
 2. Скопировать свою папку `Dirt 2` (с `dirt2_game.exe`) в `files/Dirt 2` приложения.
-3. Положить драйвер Turnip в `files/driver/vulkan.ad07xx.so`.
+3. Положить драйвер Turnip в `files/driver/vulkan.ad07xx.so` — сборка зависит от
+   поколения GPU: Adreno 8xx → Gen8 v32, Adreno 6xx/7xx → v26.3.0-R5
+   (см. `INSTALL.md`, шаг 3).
 
 Подробно, с командами и диагностикой: **[INSTALL.md](INSTALL.md)**.
 
@@ -141,7 +143,7 @@ Game data and `dirt2_game.exe` are **not** included: you need your own copy of t
 | Device | HONOR MTN-NX1 (model `MTN-NX1`) |
 | OS | Android 16 |
 | GPU | Adreno 810 |
-| Vulkan driver | Turnip Gen8 **v32** (`turnip_v26.2.0_b5`), md5 `6a4f5c6ff8f8ae33cd232253c6b339c8` |
+| Vulkan driver | Turnip Gen8 **v32** (`turnip_v26.2.0_b5`), md5 `6a4f5c6ff8f8ae33cd232253c6b339c8` — Adreno 8xx only; Adreno 6xx/7xx needs v26.3.0-R5 |
 | Render resolution | 2640 × 1200 (full screen, landscape) |
 | Quality | “ultra” preset (detail ultra, shadows 2048, MSAA off, mirrors off) |
 
@@ -185,7 +187,9 @@ be tied to game updates. See `INSTALL.md`, section 3.
 
 1. `adb install -r DiRT2-Android-arm64.apk`
 2. Copy your own `Dirt 2` folder (the one with `dirt2_game.exe`) into the app's `files/Dirt 2`.
-3. Put the Turnip driver at `files/driver/vulkan.ad07xx.so`.
+3. Put the Turnip driver at `files/driver/vulkan.ad07xx.so` — the build depends on the
+   GPU generation: Adreno 8xx → Gen8 v32, Adreno 6xx/7xx → v26.3.0-R5
+   (see `INSTALL.md`, step 3).
 
 Full instructions, commands and troubleshooting: **[INSTALL.md](INSTALL.md)**.
 
