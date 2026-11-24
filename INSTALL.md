@@ -152,7 +152,7 @@ adb shell rm -rf /data/local/tmp/dirt2-assets
 ```powershell
 $adb  = "adb"
 $pkg  = "com.daniilvinogradov.dirt2"
-$drv  = "C:\drivers\Turnip_Gen8_V32\libvulkan_freedreno.so"   # переименуем при копировании
+$drv  = "C:\drivers\Turnip\libvulkan_freedreno.so"   # сборка для вашего GPU, переименуем при копировании
 
 & $adb shell rm -rf /data/local/tmp/dirt2-driver
 & $adb shell mkdir -p /data/local/tmp/dirt2-driver
@@ -175,7 +175,8 @@ bash-вариант — те же команды без `&` и `$adb` → `adb`.
 
 ```powershell
 adb shell "run-as com.daniilvinogradov.dirt2 md5sum files/driver/vulkan.ad07xx.so"
-# 6a4f5c6ff8f8ae33cd232253c6b339c8  files/driver/vulkan.ad07xx.so
+# Adreno 8xx:  6a4f5c6ff8f8ae33cd232253c6b339c8  (15 006 216 байт)
+# Adreno 6xx/7xx: 15382fed0aa6407ff7f46eec5a2189b0  (14 188 536 байт)
 ```
 
 Можно держать несколько драйверов и переключаться без замены файла:
@@ -431,7 +432,7 @@ Install (Windows PowerShell):
 ```powershell
 $adb  = "adb"
 $pkg  = "com.daniilvinogradov.dirt2"
-$drv  = "C:\drivers\Turnip_Gen8_V32\libvulkan_freedreno.so"   # renamed while copying
+$drv  = "C:\drivers\Turnip\libvulkan_freedreno.so"   # renamed while copying
 
 & $adb shell rm -rf /data/local/tmp/dirt2-driver
 & $adb shell mkdir -p /data/local/tmp/dirt2-driver
@@ -454,7 +455,8 @@ Check the hash on the device:
 
 ```powershell
 adb shell "run-as com.daniilvinogradov.dirt2 md5sum files/driver/vulkan.ad07xx.so"
-# 6a4f5c6ff8f8ae33cd232253c6b339c8  files/driver/vulkan.ad07xx.so
+# Adreno 8xx:  6a4f5c6ff8f8ae33cd232253c6b339c8  (15 006 216 bytes)
+# Adreno 6xx/7xx: 15382fed0aa6407ff7f46eec5a2189b0  (14 188 536 bytes)
 ```
 
 You can keep several drivers and switch without replacing files:
